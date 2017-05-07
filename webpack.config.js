@@ -19,6 +19,11 @@ var config = {
 		filename: 'js/[name].js' //为每个文件生成唯一的哈希值，[name].[crushhash].js用于生产环境 不要用在开发环境，因为这会增加编译时间
 		//publicPath: "http://cdn.example.com/assets/[hash]/" 针对资源使用 CDN 和 hash
 	},
+	resolve: {
+		alias: {
+			'vue': 'vue/dist/vue.js'
+		}
+	},
 	module: {
 		//加载器配置
 		rules: [{
@@ -97,9 +102,10 @@ var config = {
 		//	    colors: true,//
 		//	    historyApiFallback: true,//不跳转
 		inline: true, //实时刷新
-		port: '3000',
+		port: '80',
 		host: '0.0.0.0'
 	}
+
 };
 
 module.exports = config;
