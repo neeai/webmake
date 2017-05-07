@@ -1,3 +1,5 @@
+require('weui');
+
 var Vue = require('vue');
 
 	window.onload = function(){

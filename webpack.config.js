@@ -36,6 +36,14 @@ var config = {
 				})
 			},
 			{
+				test: /\.css$/,
+				use:[{
+					loader:'style-loader'
+				},{
+					loader:'css-loader'
+				}]
+			},
+			{
 				test: /\.json$/,
 				use: [{
 					loader: 'json-loader'
